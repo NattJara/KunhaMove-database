@@ -1,0 +1,137 @@
+# para colocar en el main
+#importar las librerias correspondientes
+
+
+#Inicializacion
+
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+
+void main() {
+  Widget FlutterBinding.ensureInitialized();
+  Firebase.InitializeApp().then((value
+  runApp (MyApp());
+  )}
+ 
+ #Conductoras
+ 
+  class MyHomePageState extends State<MyHomePage>{
+    list registrosDriver = []
+    
+    @overraide
+    void InitState()
+      super.initState();
+      getUserDriver();
+    }
+    
+    void getUserDriver () async {
+      collectionReference collectionReference = Firebase.Firestore.Instance.collection (collection Path) ("registroConductoras")
+      
+      QuerySnapShot registroConductoras = awaite collectionReference.get();
+      if registro_conductoras.docs.length != 0){
+        for(var doc in registro_conductoras.docs){
+          print(doc.data());
+            registrosDriver.add(doc.data);
+        }
+       }
+      }
+     }
+   
+  # Pasajeras
+  
+  class MyHomePageState extends State<MyHomePage>{
+    list regPasajeras = []
+    
+    @overraide
+    void InitState(){
+      super.initState();
+      getUserDriver();
+    }
+    
+    void getUserDriver () async {
+      collectionReference collectionReference = Firebase.Firestore.Instance.collection (collection Path) ("registroPasajeras")
+      
+      QuerySnapShot registroPasajeras = awaite collectionReference.get();
+      if registro_pasajeras.docs.length != 0){
+        for(var doc in registro_pasajeras.docs){
+          print(doc.data());
+            regPasajeras.add(doc.data);
+        }
+       }
+      }
+     }
+     
+     
+ '''
+ 
+ #Inicialización Firebase-Firestore
+
+
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+
+ void main() {
+   Widget FlutterBinding.ensureInitialized();
+   Firebase.InitializeApp().then((value
+   runApp (MyApp());
+   )}
+  
+ #Conductoras
+ 
+ class MyHomePageState extends State<MyHomePage>{
+ 
+    @overraide
+    void InitState();
+    super.initState();
+    getUserDriver();
+  }
+  
+void getUserDriver () async {
+      collectionReference collectionReference = Firebase.Firestore.Instance.collection (collection Path) ("registroConductoras")
+ }
+   
+ const registroDriver = {
+ str nombres =[]
+ str apellidos =[]
+ str correoElectronico =[]
+ int contraseña =[]
+ int númeroTelefonico =[]
+     
+ db.collection('registroConductoras)
+   .add(registroDriver)
+   .then(docRef => {
+      console.log(docRef)
+   })
+   .catch(e => console.log('error', e))
+
+#Pasajeras
+
+class MyHomePageState extends State<MyHomePage>{
+ 
+    @overraide
+    void InitState();
+    super.initState();
+    getUserPass();
+  }
+  
+void getUserPass () async {
+      collectionReference collectionReference = Firebase.Firestore.Instance.collection (collection Path) ("registroPasajeras")
+ }
+ const registroPass = {
+ str nombres =[]
+ str apellidos =[]
+ str correoElectronico =[]
+ int contraseña =[]
+ int númeroTelefonico =[]
+
+ db.collection('registroPasajeras)
+   .add(registroPass)
+   .then(docRef => {
+      console.log(docRef)
+   })
+   .catch(e => console.log('error', e))
+
+     '''
+
+        
+   
