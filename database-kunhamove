@@ -7,11 +7,12 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
-void main() {
+void main() async {
   Widget FlutterBinding.ensureInitialized();
-  Firebase.InitializeApp().then((value
-  runApp (MyApp());
-  )}
+  await Firebase.InitializeApp();
+  runApp(const MyApp(
+    "KuñaMove",
+  
  
  #Conductoras
  
@@ -70,11 +71,11 @@ void main() {
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 
- void main() {
-   Widget FlutterBinding.ensureInitialized();
-   Firebase.InitializeApp().then((value
-   runApp (MyApp());
-   )}
+ void main() async {
+  Widget FlutterBinding.ensureInitialized();
+  await Firebase.InitializeApp();
+  runApp(const MyApp(
+    "KuñaMove",
   
  #Conductoras
  
